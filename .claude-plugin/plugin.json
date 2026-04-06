@@ -1,0 +1,9 @@
+{
+  "name": "behavior-hooks",
+  "version": "1.0.0",
+  "description": "Learns from your corrections and writes hooks so Claude never repeats the same mistake",
+  "author": {
+    "name": "Matt Hesketh",
+    "email": "matt@heskethwebdesign.co.uk"
+  }
+}
