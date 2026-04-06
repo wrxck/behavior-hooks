@@ -27,7 +27,7 @@ The difference between "please don't do this" in a markdown file and a PreToolUs
 3. It acknowledges concisely (no groveling)
 4. It offers to write a **machine-enforced hook** that blocks the behavior
 5. You say yes, the hook is written, tested, and installed
-6. Claude literally cannot do the thing again -- the hook denies the tool call before it executes
+6. Claude literally cannot do the thing again - the hook denies the tool call before it executes
 
 ## What Can It Hook?
 
@@ -41,7 +41,7 @@ The difference between "please don't do this" in a markdown file and a PreToolUs
 | Adding unwanted code patterns | PostToolUse (Write/Edit) | Warn on added comments, console.logs |
 | Skipping safety hooks | PreToolUse (Bash) | Block `--no-verify` |
 
-For things that can't be hooked (style preferences, communication tone), it saves a memory instead -- but it's honest about the difference.
+For things that can't be hooked (style preferences, communication tone), it saves a memory instead - but it's honest about the difference.
 
 ## Install
 
@@ -69,18 +69,18 @@ gh repo clone wrxck/behavior-hooks
 
 | | CLAUDE.md | behavior-hooks |
 |---|---|---|
-| **Enforcement** | Advisory -- Claude reads it and tries to follow it | Mandatory -- hook runs before the action, blocks if violated |
+| **Enforcement** | Advisory - Claude reads it and tries to follow it | Mandatory - hook runs before the action, blocks if violated |
 | **Persistence** | Claude may forget across sessions or after context compaction | Hooks persist in settings files, survive every session |
 | **Specificity** | Natural language, open to interpretation | Exact tool name + pattern match + shell condition |
 | **Feedback loop** | You notice the violation, correct it, hope it sticks | You correct once, the hook prevents recurrence forever |
 | **Scope** | Per-project | Per-project or global, your choice |
 
-CLAUDE.md is still valuable for guidelines, preferences, and context. But for hard rules -- things Claude must never do -- hooks are the only reliable mechanism.
+CLAUDE.md is still valuable for guidelines, preferences, and context. But for hard rules - things Claude must never do - hooks are the only reliable mechanism.
 
 ## Philosophy
 
 - **Correct once, enforce forever.** Every correction should produce a durable guardrail, not a temporary apology.
-- **Hooks over promises.** If Claude can be blocked from doing something, it should be blocked -- not asked nicely.
+- **Hooks over promises.** If Claude can be blocked from doing something, it should be blocked - not asked nicely.
 - **Honest about limits.** Some things can't be hooked. The plugin tells you when a memory is the best it can do.
 - **No groveling.** One-line acknowledgment, then action. Respect your time.
 
