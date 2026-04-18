@@ -1,5 +1,7 @@
 # behavior-hooks
 
+[![CI](https://github.com/wrxck/behavior-hooks/actions/workflows/ci.yml/badge.svg)](https://github.com/wrxck/behavior-hooks/actions/workflows/ci.yml)
+
 **Stop telling Claude the same thing twice.**
 
 A Claude Code plugin that detects when you're unhappy with something Claude did, and writes an enforceable hook to make sure it never happens again.
